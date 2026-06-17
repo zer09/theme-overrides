@@ -1,0 +1,47 @@
+{
+  "name": "pi-theme-overrides",
+  "version": "0.1.0",
+  "description": "System-aware dark/light theme overrides for the Pi coding agent.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zer09/theme-overrides.git"
+  },
+  "homepage": "https://github.com/zer09/theme-overrides#readme",
+  "bugs": {
+    "url": "https://github.com/zer09/theme-overrides/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-theme"
+  ],
+  "files": [
+    "*.ts",
+    "themes",
+    "config.default.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "pack:dry": "npm pack --dry-run",
+    "check": "npm run pack:dry"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
